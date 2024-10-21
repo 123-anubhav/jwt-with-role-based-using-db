@@ -1,4 +1,4 @@
-# SpringBoot_JWT_App
+# SpringBoot_JWT-App-ROLE-BASED-With-MYSQL
 # URL's
 
 1) http://localhost:8080/api/register
