@@ -55,24 +55,7 @@ public class CustomerRestController {
 		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(c.getUname(), c.getPwd());
 		try {
 			Authentication authenticate = authManager.authenticate(token);
-			/*if (authenticate.isAuthenticated()) {
-				// Optionally return a JWT token or user info
-				Customer customer = crepo.findByUname(c.getUname());
 				
-				//System.out.println(customer);
-				
-				// Generate JWT token
-				 String jwtToken = jwt.generateToken(customer.getUname(), customer.getRoles());
-				// return new ResponseEntity<>(jwtToken, HttpStatus.OK);
-				return new ResponseEntity<>("User logged in successfully", HttpStatus.OK);
-			}
-			return new ResponseEntity<>("User logged in successfully", HttpStatus.OK);
-		} catch (Exception e) {
-			return new ResponseEntity<>("Invalid credentials", HttpStatus.BAD_REQUEST);
-		}*
-		
-		/*/
-			
 			 // If authentication succeeds, generate a token
 		    if (authenticate.isAuthenticated()) {
 		        UserDetails userDetails = (UserDetails) authenticate.getPrincipal();
@@ -87,9 +70,8 @@ public class CustomerRestController {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		// return new ResponseEntity<>("Authentication failed",
-		// HttpStatus.UNAUTHORIZED);
-		return "fuckc.,s";
+		
+		return "response comes from login/ api";
 	}
 
 	@PostMapping("/register")
